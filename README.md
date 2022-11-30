@@ -8,11 +8,11 @@
 
 
 This code provides an initial version for the implementation of the **SCIENTIA SINICA Informationis** paper "Generalized representation of local relationships for few-shot
-incremental learning". The projects are still under construction.
+incremental learning". The projects are still under construction.  [Paper Link](https://www.sciengine.com/SSI/doi/10.1360/SSI-2022-0231)
 
 ### 简介
 
-《局部关系泛化表征的小样本增量学习》，中国科学，信息科学，2022，已接收。代码示例如下。
+《局部关系泛化表征的小样本增量学习》，中国科学，信息科学，2022，已接收, [论文链接](https://www.sciengine.com/SSI/doi/10.1360/SSI-2022-0231)。代码示例如下。
 
 ### Requirements
 
