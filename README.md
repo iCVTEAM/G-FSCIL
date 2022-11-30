@@ -4,7 +4,7 @@
 ![License](https://img.shields.io/badge/License-MIT-brightgreen)
 ![Copyright](https://img.shields.io/badge/Copyright-CVTEAM-red)
 
-<img src="https://github.com/iCVTEAM/G-FSCIL/blob/master/teaser.pdf" width = "600" height = "300" align=center />
+<img src="https://github.com/iCVTEAM/G-FSCIL/blob/master/teaser.jpg" width = "600" height = "300" align=center />
 
 
 This code provides an initial version for the implementation of the **SCIENTIA SINICA Informationis** paper "Generalized representation of local relationships for few-shot
