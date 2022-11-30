@@ -48,6 +48,7 @@ $python train.py -project base -dataset cub200 -base_mode 'ft_cos' -new_mode 'av
 ##### For Meta-Learning Stage:
 
 3. cd the /meta-learning file 
+
 4.1   For  mini_imagenet dataset
 ```
 $python train.py -project frn -dataset mini_imagenet -base_mode 'ft_cos' -new_mode 'avg_cos' -gamma 0.1 -lr_base 0.001 -lr_new 0.0001 -decay 0.0005 -epochs_base 103 -epochs_new 10 -schedule Milestone -milestones 40 70  -temperature 16 -gpu '0,1'  -episode_way 20 -episode_shot 10 -model_dir "/yourpathhere.pth"
