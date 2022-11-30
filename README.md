@@ -96,14 +96,14 @@ The code of the paper is freely available for non-commercial purposes. Permissio
 ### Citations:
 
 Please remember to cite us if u find this useful :)
-
+```
 @inproceedings{zhao2022local,
   title={局部关系泛化表征的小样本增量学习},
   author={赵一凡, 李甲，田永鸿},
   booktitle={中国科学：信息科学},
   year={2022},
 }
-
+```
 
 
 ### Acknowledgment
