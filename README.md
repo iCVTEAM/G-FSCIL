@@ -1,4 +1,4 @@
-#### Introduction
+### Introduction
 
 
 ![License](https://img.shields.io/badge/License-MIT-brightgreen)
@@ -10,56 +10,56 @@
 This code provides an initial version for the implementation of the **SCIENTIA SINICA Informationis** paper "Generalized representation of local relationships for few-shot
 incremental learning". The projects are still under construction.
 
-#### 简介
+### 简介
 
 《局部关系泛化表征的小样本增量学习》，中国科学，信息科学，2022，已接收。代码示例如下。
 
-#### Requirements
+### Requirements
 
 ```
 PyTorch>=1.1, tqdm, torchvsion.
 ```
 
-#### Data Preparation
+### Data Preparation
 
-```
+
 1. Download the benchmark dataset and unzip them in your customized path.
     CUB-200-2011 [links](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html)
-    For miniImageNet dataset from other sharing links in CEC [A] [links](https://drive.google.com/drive/folders/11LxZCQj2FRCs0JTsf_dafvTHqFn2yGSN?usp=sharing)
-2. Modify the lines in train.py from 3~5
+    For miniImageNet dataset from other sharing links in [CEC](https://github.com/icoz69/CEC-CVPR2021), Click [links](https://drive.google.com/drive/folders/11LxZCQj2FRCs0JTsf_dafvTHqFn2yGSN?usp=sharing)  to download.
+2. Modify the lines in train.py from 3~5 [links](https://github.com/iCVTEAM/G-FSCIL/blob/c13ad19ed842d05136996117807342a3b6466076/meta-learning/train.py#L6)
 3. unzip or tar these datasets
-```
 
 
-#### How to run
 
-##### For Pretraining Stage:
+### How to run
 
-1. cd the /pretrain file 
+#### For Pretraining Stage:
 
-2.1  For  mini_imagenet
+Step 1. cd the /pretrain file 
+
+Step 2.1  For  mini_imagenet
 ```
 $python train.py -project base -dataset mini_imagenet -base_mode 'ft_cos' -new_mode 'avg_cos' -gamma 0.1 -lr_base 0.1 -lr_new 0.1 -decay 0.0005 -epochs_base 100 -schedule Milestone -milestones 40 70 -gpu 0,1 -temperature 16
 ```
-2.2  For  CUB dataset 
+Step 2.2  For  CUB dataset 
 ```
 $python train.py -project base -dataset cub200 -base_mode 'ft_cos' -new_mode 'avg_cos' -gamma 0.1 -lr_base 0.002 -lr_new 0.1 -decay 0.0005 -epochs_base 100 -schedule Milestone -milestones 40 70 -gpu 0,1 -temperature 16
 ```
-##### For Meta-Learning Stage:
+#### For Meta-Learning Stage:
 
-3. cd the /meta-learning file 
+Step 3. cd the /meta-learning file 
 
-4.1   For  mini_imagenet dataset
+Step 4.1   For  mini_imagenet dataset
 ```
 $python train.py -project frn -dataset mini_imagenet -base_mode 'ft_cos' -new_mode 'avg_cos' -gamma 0.1 -lr_base 0.001 -lr_new 0.0001 -decay 0.0005 -epochs_base 103 -epochs_new 10 -schedule Milestone -milestones 40 70  -temperature 16 -gpu '0,1'  -episode_way 20 -episode_shot 10 -model_dir "/yourpathhere.pth"
 ```
-4.2   For  cub dataset
+Step 4.2   For  cub dataset
 ```
 $python train.py -project frn -dataset cub200 -base_mode 'ft_cos' -new_mode 'avg_cos' -gamma 0.1 -lr_base 0.002 -lr_new 0.001 -decay 0.0005 -epochs_base 101 -schedule Milestone -milestones 40 60 80 -episode_way 20 -episode_shot 10 -gpu '0,1' -temperature 16  -model_dir "/yourpathhere.pth"
 ```
 
 
-##### Pretraining models
+#### Pretraining models
 | Type/Datasets | CUB-200-2011                                                 | mini-ImageNet                                                |
 | ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Pretrained    | [Links](https://drive.google.com/file/d/1aoCCe9mDJspHtrLEUp6fDIc2aTEst_At/view?usp=share_link) | [Links](https://drive.google.com/file/d/1DULS9Imimgo_06ni4oOJ0mGh2bUeNlWh/view?usp=share_link) |
@@ -72,14 +72,14 @@ $python train.py -project frn -dataset cub200 -base_mode 'ft_cos' -new_mode 'avg
 2.  Two K80 GPUs are used in our experiments. 
 
 
-#### To do
+### To do
 
 1. The project is still ongoing, finding suitable platforms and GPU devices for complete stable results.
 
 2. The project is re-constructed for better understanding, we release this version for a quick preview of our paper.
 
    
-#### License
+### License
 
 The code of the paper is freely available for non-commercial purposes. Permission is granted to use the code given that you agree:
 
@@ -93,7 +93,7 @@ The code of the paper is freely available for non-commercial purposes. Permissio
 
 5. That all rights not expressly granted to you are reserved by the authors of the code.
 
-#### Citations:
+### Citations:
 
 Please remember to cite us if u find this useful :)
 
@@ -106,7 +106,7 @@ Please remember to cite us if u find this useful :)
 
 
 
-#### Acknowledgment
+### Acknowledgment
 Our project references the codes in the following repos.
 Please refer to these codes for details.
 
